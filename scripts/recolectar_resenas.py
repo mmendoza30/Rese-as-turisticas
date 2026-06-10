@@ -4,14 +4,13 @@ import glob
 class consolidar_resenas:
     def __init__(self,ruta):
         self.df_ruta = ruta
-        self.columnas = ['name','rating','review_text','review_rating']
 
     def consolidar(self):
         exceles = glob.glob(f'{self.df_ruta}/*.xlsx')
         datos = []
 
         for doc in exceles:
-            df = pd.read_excel(doc, usecols=self.columnas)
+            df = pd.read_excel(doc)
             datos.append(df)
             #df_resenas = pd.merge(df_resenas,df,on=columnas,how='outer')
 
