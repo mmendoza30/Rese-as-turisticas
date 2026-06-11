@@ -12,11 +12,11 @@ def calculo_radio(tuplas):
     sustantivos = 0
 
     for token, etq in tuplas:
-        etqm = str(etq).upper()
+        etqm = str(etq).lower().strip()
         #Procesos de identificacion de sustantivos dependientdo del tagger
-        if "NOUN" in etqm or "PROPN" in etqm or etqm in ["NC", "NP", "NOUN"]:
+        if "noun" in etqm or "propn" in etqm or etqm in ["nc", "np", "n"]:
             sustantivos += 1
-        elif "VERB" in etqm or "AUX" in etqm or etqm in ["V", "VERB", "VM", "VS"]:
+        elif "verb" in etqm or "aux" in etqm or etqm in ["v", "vm", "vs"]:
             verbos += 1
 
     if verbos == 0:

@@ -34,7 +34,7 @@ class tokenizacion:
         #Se guardan las tuplas de token y lema
         lista = []
         for token in archivo:
-            lista.append((token.text,token.lemma_))
+            lista.append((token.text,token.pos_))
         return lista
 
 
