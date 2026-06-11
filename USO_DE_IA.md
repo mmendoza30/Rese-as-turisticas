@@ -9,6 +9,7 @@
 Durante el desarrollo del proyecto Reseñas Turisticas de Costa Rica para minería de textos, utilizamos diferentes asistentes de inteligencia artificial para agilizar la codificación, resolver problemas técnicos y apoyar en la interpretación de resultados. A continuación, se detalla el uso por parte del equipo.
 
 **Herramientas utilizadas:** PONER LASS IAS UTILIZADAS
+Gemini
 
 ---
 
@@ -17,6 +18,7 @@ Durante el desarrollo del proyecto Reseñas Turisticas de Costa Rica para miner�
 La IA fue utilizada para definir la estructura general del proyecto, incluyendo la organización de carpetas, la separación de etapas (ingesta, EDA, preprocesamiento y modelado) y la convención de nombres de los archivos. Esto permitió trabajar de forma ordenada y mantener consistencia durante todo el desarrollo.
 
 **Aporte:** Se logró una arquitectura clara, modular y escalable desde el inicio del proyecto.
+
 
 ---
 
@@ -46,33 +48,33 @@ La IA apoyó en la comprensión de métricas y resultados de algoritmos como reg
 ## 2. Ejemplos de prompts utilizados  
 
 ---
-
-Se utilizó IA para reorganizar código repetitivo, convertirlo en funciones reutilizables y mejorar su legibilidad y mantenimiento.
-
+Necesito de tu ayuda con base a este document adjuntado me ayudes a hacer el contenido para un readme de GitHub, este es el proyecto que debo realizar y los datos que estamos usando son de varios lugares de Costa Rica(Hoteles, Restaurantes y otros lugares)
+Los creadores de este proyecto son: Fernando Contreras y Mónica Mendoza
+---
+Estoy trabando con un corpus en espanol, como puedo entrenar al etiquetador de NLTK para esto?
+---
+Cómo puedo realizer un proceso de identificacion de sustantivos dependiendo del tagger y los verbos?
+---
+Cuales son las formulas para realizer el calculo de metricas derivadas (ratio N/V, densidad léxica)
+---
+Cómo puedo hacer un dashboard interactivo utilizando la libreria de Plotly
+---
+Ayudame dando una posible estructura para generar un markdown de documentacion de metologia ordenada para un Proyecto
 ---
 
-Se utilizó IA para reorganizar código repetitivo, convertirlo en funciones reutilizables y mejorar su legibilidad y mantenimiento.
-
----
-
-Se utilizó IA para reorganizar código repetitivo, convertirlo en funciones reutilizables y mejorar su legibilidad y mantenimiento.
-
----
 
 ## 3. Reflexión sobre cómo la IA ayudó en el aprendizaje  
 
 ---
 
-Se utilizó IA para reorganizar código repetitivo, convertirlo en funciones reutilizables y mejorar su legibilidad y mantenimiento.
-
+Gracias al uso de la IA nos dio claridad de una mejor organizacion de correcto, el uso correcto de ciertas librerias, pasos a seguir y cómo realizar calculos desconocidos
 ---
 
 ## 4. Qué modificaciones se hicieron al código/análisis generado por IA  
 
 ---
 
-Se utilizó IA para reorganizar código repetitivo, convertirlo en funciones reutilizables y mejorar su legibilidad y mantenimiento.
-
+Se ajustaron errores, se organizó mejor el proyecto y se aplicaron de manera correcta las formulas.
 ---
 
 
