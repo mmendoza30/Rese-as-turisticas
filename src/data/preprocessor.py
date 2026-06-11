@@ -10,8 +10,18 @@ from typing import List, Tuple
 class tokenizacion:
     def __init__(self):
         #Se realiza la carga del modelo a utilizar: es_core_news_md utilizando Spacy
-        #Instalacion del recurso en espanol de NLTK
+        #Instalacion del recursos necesarios de NLTK
         #nltk.download('punkt_tab')
+        #nltk.download('cess_esp')
+
+        #Se debe cargar un corpus en español para entrenar al etiquetador de NLTK
+        from nltk.corpus import cess_esp
+        entrenamiento = cess_esp.tagged_sents()
+
+        #Creacion de un propio tagger en español
+        print("Entrenando el etiquetador de NLTK para español...")
+        self.tagger_nltk = nltk.UnigramTagger(entrenamiento)
+
         self.nlp = spacy.load('es_core_news_md')
 
     #En este modelo lo que se hara es una funcion donde al final se retorne una lista con el token y lema, utilizando spacy
@@ -34,8 +44,9 @@ class tokenizacion:
         # Se valida que la reseña contenga un texto
         if pd.isna(texto) or str(texto).strip() == "":
             return []
-
-        return nltk.word_tokenize(texto, language="spanish")
+        #
+        pl = nltk.word_tokenize(str(texto),language='spanish')
+        return nltk.pos_tag(pl)
 
     #Se le realiza el prceso de tokenizacion a todo el dataframe con las dos herramientas creadas anteriormente
     def proceso_tokenizacion(self, df, column: str = 'reseña'):
