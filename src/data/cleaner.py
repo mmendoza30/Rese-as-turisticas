@@ -52,6 +52,11 @@ class ReviewCleaner:
         'friends': 'amigos'
     }
 
+    MAPEO_TIPO_LUGAR = {
+        'retaurante': 'restaurante',
+        'restaurant': 'restaurante'
+    }
+
 
     # Constructor y utilidades internas
 
@@ -229,6 +234,11 @@ class ReviewCleaner:
         self.df['grupo_de_viaje'] = self.df['grupo_de_viaje'].replace(self.MAPEO_GRUPO_VIAJE)
         self._log(f"Grupo de viaje traducido. Distribución anterior: {antes}")
 
+    def limpiar_tipo_lugar(self) -> None:
+        """Se corriguen los errores de escritura"""
+        if 'tipo_lugar' in self.df.columns:
+            self.df['tipo_lugar'] = self.df['tipo_lugar'].replace(self.MAPEO_TIPO_LUGAR)
+            self._log("Columna de Tipo Lugar corregida")
 
     # 11. Verificación final y guardado
 
@@ -268,6 +278,7 @@ class ReviewCleaner:
         self.limpiar_texto_resenas()
         self.convertir_calificacion_entero()
         self.traducir_grupo_viaje()
+        self.limpiar_tipo_lugar()
         self.verificar_estado()
         return self.df
 
