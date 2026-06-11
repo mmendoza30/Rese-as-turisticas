@@ -55,6 +55,7 @@ class tokenizacion:
         df_rst["tokens_spacy"] = df_rst[column].apply(self.proceso_tokenizacion_spacy)
         df_rst["tokens_nltk"] = df_rst[column].apply(self.proceso_tokenizacion_nltk)
         print("Se ha realizado de manera exitosa el proceso de tokenizacion")
+        df_rst.to_csv("../../data/processed/resenas_pos_tagged.csv", index=False)
         return df_rst
 
 
