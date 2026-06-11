@@ -26,7 +26,7 @@ A través del **Part-of-Speech (POS) Tagging**, exploramos y contrastamos los pa
 * **Procesamiento de Lenguaje Natural (PLN):** * `spaCy` (Pipeline principal con el modelo robusto en español: `es_core_news_md`)
     * `NLTK` (Análisis comparativo de sistemas de etiquetas)
 * **Análisis de Datos:** `pandas`, `Counter`
-* **Visualización y Dashboard:** `Plotly Dash` y `matplotlib` *(Nota: No se utiliza Streamlit por requerimientos de arquitectura)*.
+* **Visualización y Dashboard:** `Plotly Dash`.
 
 ---
 
