@@ -31,7 +31,7 @@ class tokenizacion:
             return []
         #Procesamiento con el pipeline de spacy
         archivo = self.nlp(str(texto))
-        #Se guardan las tuplas de token y lema
+        #Se guardan las tuplas de token y post
         lista = []
         for token in archivo:
             lista.append((token.text,token.pos_))
@@ -46,7 +46,7 @@ class tokenizacion:
             return []
         #
         pl = nltk.word_tokenize(str(texto),language='spanish')
-        return nltk.pos_tag(pl)
+        return self.tagger_nltk.tag(pl)
 
     #Se le realiza el prceso de tokenizacion a todo el dataframe con las dos herramientas creadas anteriormente
     def proceso_tokenizacion(self, df, column: str = 'reseña'):
