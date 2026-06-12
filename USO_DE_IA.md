@@ -8,8 +8,7 @@
 
 Durante el desarrollo del proyecto Reseñas Turisticas de Costa Rica para minería de textos, utilizamos diferentes asistentes de inteligencia artificial para agilizar la codificación, resolver problemas técnicos y apoyar en la interpretación de resultados. A continuación, se detalla el uso por parte del equipo.
 
-**Herramientas utilizadas:** PONER LASS IAS UTILIZADAS
-Gemini
+**Herramientas utilizadas:** Gemini, deepseek, chatgpt
 
 ---
 
@@ -38,11 +37,14 @@ Durante el desarrollo, la IA fue utilizada para interpretar errores de ejecució
 
 ---
 
-### Interpretación de Resultados de Minería de Datos
+### Generación del Dashboard Interactivo
 
-La IA apoyó en la comprensión de métricas y resultados de algoritmos como reglas de asociación, PCA, t-SNE y UMAP, facilitando la interpretación de patrones y relaciones en los datos.
-
-**Aporte:** Obtención de insights claros y mejor entendimiento del comportamiento del dataset.
+La IA apoyó en la creación de un dashboard con Plotly Dash que incluye:
+- Gráficos de distribución POS con filtros interactivos.
+- Comparación de métricas por polaridad y tipo de lugar.
+- Estilos profesionales con temática inspirada en Costa Rica (colores verde selva, azul mar, etc.).
+- 
+**Aporte:** Obtención de una herramienta visual funcional y atractiva para presentar los resultados.
 
 
 ## 2. Ejemplos de prompts utilizados  
@@ -66,15 +68,20 @@ Ayudame dando una posible estructura para generar un markdown de documentacion d
 ## 3. Reflexión sobre cómo la IA ayudó en el aprendizaje  
 
 ---
-
-Gracias al uso de la IA nos dio claridad de una mejor organizacion de correcto, el uso correcto de ciertas librerias, pasos a seguir y cómo realizar calculos desconocidos
+El uso de la IA nos proporcionó claridad sobre la mejor organización del código, el uso correcto de librerías como spaCy y NLTK, los pasos a seguir para construir un pipeline completo de PLN y cómo realizar cálculos estadísticos desconocidos hasta el momento (densidad léxica, ratio N/V). Además, nos permitió entender las diferencias entre sistemas de etiquetas (Universal POS vs. Penn Treebank) y justificar por qué spaCy es más adecuado para el español.
+Gracias a la IA, aprendimos a depurar errores de forma más eficiente, a estructurar un proyecto modular y a crear visualizaciones interactivas profesionales. También nos ayudó a redactar documentación técnica y a mantener un repositorio ordenado en GitHub.
 ---
 
 ## 4. Qué modificaciones se hicieron al código/análisis generado por IA  
 
 ---
+Corrección del tagger de NLTK: El código inicial usaba nltk.pos_tag() (tagger en inglés). Lo modificamos para emplear self.tagger_nltk.tag() entrenado con cess_esp.
+Ajuste de rutas de archivos: La IA sugería rutas fijas; nosotros implementamos una función buscar_csv() que busca dinámicamente el archivo en múltiples niveles de directorio.
+Personalización del CSS: Los estilos básicos proporcionados fueron reemplazados por una paleta de colores inspirada en Costa Rica (verde selva, azul mar, arena) y se añadieron sombras, bordes redondeados y tipografía profesional.
+Optimización de métricas: Las fórmulas de ratio N/V y densidad léxica se ajustaron para manejar correctamente los casos donde no hay verbos o la lista de tokens está vacía.
+Modularización: Separamos las funciones de análisis en src/analysis/ y las páginas del dashboard en dashboard/pages/ para mantener el proyecto ordenado y reutilizable.
 
-Se ajustaron errores, se organizó mejor el proyecto y se aplicaron de manera correcta las formulas.
+Estas modificaciones aseguraron que el código final fuera funcional, legible y estuviera completamente adaptado a nuestro corpus y objetivos.
 ---
 
 
